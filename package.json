@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Flandre3569/covue.git"
+    "url": "https://github.com/Flandre3569/covue.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Coisini_mx",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Flandre3569/covue/issues"
   },
