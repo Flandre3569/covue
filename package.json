@@ -13,7 +13,10 @@
     "type": "git",
     "url": "https://github.com/Flandre3569/covue.git"
   },
-  "keywords": ["vue-cli", "vue-core"],
+  "keywords": [
+    "vue-cli",
+    "vue-core"
+  ],
   "author": "Coisini_mx",
   "license": "MIT",
   "bugs": {
@@ -22,6 +25,7 @@
   "homepage": "https://github.com/Flandre3569/covue#readme",
   "dependencies": {
     "commander": "^9.0.0",
-    "download-git-repo": "^3.0.2"
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.6"
   }
 }

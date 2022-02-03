@@ -5,6 +5,7 @@ const createCommands = require('./lib/core/createCommands')
 
 // 版本号
 program.version(require('./package.json').version)
+// 仓库地址
 
 // --help
 helpProgram()
