@@ -1,6 +1,6 @@
 {
   "name": "covue",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "✨✨一个可以快速生成vue3项目的自定义脚手架",
   "main": "index.js",
   "bin": {
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "https://github.com/Flandre3569/covue.git"
   },
-  "keywords": [],
+  "keywords": ["vue-cli", "vue-core"],
   "author": "Coisini_mx",
   "license": "MIT",
   "bugs": {
