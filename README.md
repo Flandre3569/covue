@@ -48,10 +48,15 @@ npm run dev
 ### 辅助指令：
 
 ```
-covue -h/--help     展示所有可用指令
-covue -V/--version    展示当前系统版本
-covue -f <name>/--framework <name>  展示当前系统，但是当前只支持vue-core
+Options:
+  -V, --version               output the version number
+  -c --coisini                a coisini vue3 cli
+  -d --dest <dest>            a destination folder
+  -f --framework <framework>  your frameword
+  -h, --help                  display help for command
 ```
+
+
 
 ### 添加component：
 
@@ -80,18 +85,62 @@ covue add <name> -d <地址>    在指定的<地址>位置添加 <name>.vue 页�
 
 该指令初衷为添加一个vue的组件，但是也可以在项目任意位置添加一个vue页面。
 
+
+
 ### 添加page：添加新的页面，自动生成路由
 
 ```node
-covue addpage <name>   默认在src/pages/ 目录添加
+covue addpage <name>   默认在src/pages 目录添加<name>文件夹，文件夹中有三个文件，分别是page、type、router
+或
+covue addpage <name> -d <地址>  在指定的<地址>位置添加
 ```
+
+**page模板：**
+
+```vue
+<template>
+  <div class="<name>">
+    <h2> <name> </h2>
+  </div>
+</template>
+
+<script lang="ts" setup></script>
+
+<style scoped>
+.<name> {
+}
+</style>
+```
+
+**router模板：**
+
+```tsx
+const <name> = () => import('./<name>.vue')
+export default {
+  path: '/<name>',
+  name: '<name>',
+  component: <name>,
+  children: [
+  ]
+}
+```
+
+**type模板：**
+
+```tsx
+export interface I<name> {
+
+}
+```
+
+
 
 ### 添加store：状态管理
 
 ```node
-covue addstore <name>  默认在src/store  目录添加<name>.ts
+covue addstore <name>  默认在src/store  目录添加<name>文件夹，文件夹中包含<name>.ts 和type.ts
 或
-covue addstore <name> -d <地址>   在指定的<地址>位置添加 <name>.ts
+covue addstore <name> -d <地址>   在指定的<地址>位置添加
 ```
 
 **页面模板为：**
@@ -109,6 +158,14 @@ export const homeStore = defineStore("<name>", {
   // methods
   actions: {},
 });
+```
+
+**type模板：**
+
+```tsx
+export interface I<name> {
+
+}
 ```
 
 
@@ -183,6 +240,7 @@ export const homeStore = defineStore("<name>", {
 - 浏览器适配范围
 - 路由守卫(可选)
 - 404拦截
+- 动态路由(根据pages文件结构生成路由)
 
 ### 脚手架适用范围:
 
@@ -195,4 +253,3 @@ export const homeStore = defineStore("<name>", {
 - 添加js版本
 - 添加ui库预选，tailwind选择性支持
 - 添加tslint、prettier预选
-- 添加动态路由
