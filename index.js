@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 const program = require('commander')
 const helpProgram = require('./lib/core/helpProgram')
 const createCommands = require('./lib/core/createCommands')
