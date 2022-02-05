@@ -203,13 +203,19 @@ export interface I<name> {
     │
     ├─pages
     │  ├─home
-    │  │      home.vue
+    │  │      index.vue
+    │  │      router.ts
+    │  │      type.ts
     │  │
     │  ├─login
-    │  │      login.vue
+    │  │      index.vue
+    │  │      router.ts
+    │  │      type.ts
     │  │
-    │  └─not-found
-    │          not-found.vue
+    │  └─notfound
+    │          index.vue
+    │          router.ts
+    │          type.ts
     │
     ├─router
     │      index.ts
@@ -218,12 +224,21 @@ export interface I<name> {
     │      index.ts
     │
     ├─store
-    │      home.ts
-    │      index.ts
-    │      login.ts
+    │  ├─home
+    │  │      home.ts
+    │  │      type.ts
+    │  │
+    │  ├─index
+    │  │      index.ts
+    │  │      type.ts
+    │  │
+    │  └─login
+    │          login.ts
+    │          type.ts
     │
     └─utils
-            Cache.js
+            Cache.ts
+            firstUpperCase.ts
 ```
 
 ### 模板包含：
@@ -244,7 +259,7 @@ export interface I<name> {
 
 ### 脚手架适用范围：
 
-本身的设计是为了方便自己开发， 减少项目搭建所用时间，该脚手架适用于任何场景，模板内容所包含的核心技术为当前最新的vue3及其配件，pinia和router4都是为vue3也就是vue-core量身打造的，配合热度高涨的vite项目打包工具，另外解决了跨域和本地存储问题，并适配axios，为前后端分离项目做好充分的准备。但是对于工程化的专业人员来说，没有配置tslint和prettier等规范化，原因为了方便像我一样的大学生编写🤷‍♂️。
+本身的设计是为了方便自己开发， 减少项目搭建所用时间，该脚手架适用于任何场景，模板内容所包含的核心技术为当前最新的vue3及其配件，pinia和router4都是为vue3也就是vue-core量身打造的，配合热度高涨的vite项目打包工具，另外解决了跨域和本地存储问题，并适配axios，为前后端分离项目做好充分的准备。但是对于工程化的专业人员来说，没有配置tslint和prettier等规范化，原因为了方便像我一样的大学生编写🤷‍♂️。另外路由只是简单的将pages文件夹下所有的页面进行获取动态添加，没有根据权限进行分配。🤦‍♂️
 
 ### 预添加功能：
 
@@ -255,4 +270,4 @@ export interface I<name> {
 - 添加tslint、prettier预选
 
 ### 目前bug：
-目前系统还有一点小bug，并且还没有在npm上线最终版本，动态路由还没有设计完成，另外program.dest不知道为什么获取不到命令行输入的路径了，现在还在寻找原因。🙌
+目前系统还有一点小bug，并且还没有在npm上线最终版本，program.dest不知道为什么获取不到命令行输入的路径了，现在还在寻找原因。🙌
