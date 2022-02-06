@@ -1,6 +1,6 @@
 {
   "name": "covue",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "description": "✨✨一个可以快速生成vue3项目的自定义脚手架",
   "main": "index.js",
   "bin": {

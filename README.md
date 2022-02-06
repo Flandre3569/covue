@@ -5,19 +5,19 @@
 
 
 ## 获取方式：
-
+打开终端命令行输入：
 ``` node
-npm install covue -g
+pnpm install covue -g
 ```
 
+*也可以使用npm*
 
 
 ## 使用说明：
 
 ### 创建vue3项目：
 
-在你要创建项目的目录下输入以下指令：
-
+在你要创建项目的目录下打开终端命令行输入以下指令：
 ```node
 covue create <project_name>
 ```
@@ -26,10 +26,19 @@ covue create <project_name>
 
 等待一段时间后，会生成一个vue3模板，并且已经下载好依赖。(node_modules)
 
+进入项目:
+```PowerShell
+cd <project_name>
+```
+使用编辑器打开文件(这里用vsc打开):
+```PowerShell
+code .
+```
+
 然后输入以下指令开启项目：
 
 ```node
-npm run dev
+pnpm run dev
 ```
 
 > show:
@@ -66,7 +75,7 @@ covue add <name>        默认在src/components/ 目录添加 <name>.vue 页面
 covue add <name> -d <地址>    在指定的<地址>位置添加 <name>.vue 页面
 ```
 
-**页面模板为：**
+**页面模板：**
 
 ```vue
 <template>
