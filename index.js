@@ -9,7 +9,6 @@ program.version(require('./package.json').version)
 
 // --help
 helpProgram()
-
 // 其他指令
 createCommands()
 

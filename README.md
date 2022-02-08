@@ -278,5 +278,5 @@ export interface I<name> {
 - 添加ui库预选，tailwind选择性支持
 - 添加tslint、prettier预选
 
-### 目前bug：
-目前系统还有一点小bug，并且还没有在npm上线最终版本，program.dest不知道为什么获取不到命令行输入的路径了，现在还在寻找原因。🙌
+### 通知：
+无法指定路径bug已修复，可以通过-d指令自由选择添加组件或页面的位置了。
