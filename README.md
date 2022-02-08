@@ -73,6 +73,7 @@ Options:
 covue add <name>        默认在src/components/ 目录添加 <name>.vue 页面
 或
 covue add <name> -d <地址>    在指定的<地址>位置添加 <name>.vue 页面
+例如: covue add navBar -d src/pages
 ```
 
 **页面模板：**
