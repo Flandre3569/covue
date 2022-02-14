@@ -1,7 +1,7 @@
 {
   "name": "covue",
-  "version": "1.1.9",
-  "description": "✨✨一个可以快速生成vue3项目的自定义脚手架",
+  "version": "1.2.0",
+  "description": "✨✨一个可以快速生成vue3||node-koa项目的自定义脚手架",
   "main": "index.js",
   "bin": {
     "covue": "index.js"
@@ -16,7 +16,9 @@
   "keywords": [
     "vue-cli",
     "vue-core",
-    "vue"
+    "vue",
+    "node",
+    "koa"
   ],
   "author": "Coisini_mx",
   "license": "MIT",
@@ -27,6 +29,7 @@
   "dependencies": {
     "commander": "6.1.0",
     "download-git-repo": "^3.0.2",
-    "ejs": "^3.1.6"
+    "ejs": "^3.1.6",
+    "inquirer": "^8.2.0"
   }
 }

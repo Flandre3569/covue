@@ -1,8 +1,8 @@
 # COVUE
 
-✨✨ **一个快速生成功能全面的vue3模板脚手架**
+✨✨ **一个快速生成功能全面的 vue3 || node-koa 模板脚手架**
 
-
+*可用于windows/macOS/linux*
 
 ## 获取方式：
 打开终端命令行输入：
@@ -15,16 +15,21 @@ pnpm install covue -g
 
 ## 使用说明：
 
-### 创建vue3项目：
+### 创建项目：
 
 在你要创建项目的目录下打开终端命令行输入以下指令：
 ```node
 covue create <project_name>
 ```
+选择要生成的项目模板：
+```
+PS E:\> covue create demo
+? 🦄please choose a framework: (Use arrow keys)
+> vue-core
+  node-koa
+```
 
-*可用于windows/macOS/linux*
-
-等待一段时间后，会生成一个vue3模板，并且已经下载好依赖。(node_modules)
+等待一段时间后，项目自动创建完成，并且已经下载好依赖。(node_modules)
 
 进入项目:
 ```PowerShell
@@ -40,6 +45,7 @@ code .
 ```node
 pnpm run dev
 ```
+> vue3项目启动演示：
 
 > show:
 >
@@ -273,11 +279,79 @@ export interface I<name> {
 
 ### 预添加功能：
 
-- 添加脚手架功能自选，提高脚手架灵活度（inquirer.js）
+- 添加脚手架功能自选，提高脚手架灵活度（inquirer.js）✅
 - 添加项目搭建动画，提高用户体验好感
 - 添加js版本
+- 添加node-koa创建✅
 - 添加ui库预选，tailwind选择性支持
 - 添加tslint、prettier预选
 
 ### 通知：
 无法指定路径bug已修复，可以通过-d指令自由选择添加组件或页面的位置了。
+
+---
+## Version 1.2.0:
+**添加了node-koa模板生成，为服务器的搭建也提供充足的便利。**
+
+### 模板目录结构：
+```
+│  .env
+│  .gitignore
+│  LICENSE
+│  main.js
+│  package-lock.json
+│  package.json
+│  README.md
+│
+├─app
+│      config.js
+│      database.js
+│      main.js
+│      router.js
+│
+├─controller
+│      authorization.js
+│      user.js
+│
+├─errors
+│      error-types.js
+│      error.js
+│
+├─keys
+│      private.key
+│      public.key
+│
+├─middleware
+│      md5-crypto.js
+│      verify.js
+│
+├─router
+│      user.js
+│
+├─service
+│      user.js
+│
+└─utils
+        pwd-handle.js
+```
+
+### 模板内容包含：
+- 注册功能
+- 登录验证
+- 用户名、密码合法性验证
+- jwt身份验证，验证算法采用RS256非对称加密
+- 动态加载后端路由接口
+- 密码MD5加密
+- dotenv加载环境变量配置
+- mysql2数据库连接
+- 错误处理封装
+- json数据解析，方便接受前端请求
+
+
+### node-koa框架模板介绍：
+该模板的使用首先需要完成以下几个步骤：
+1. 在.env文件下配置好自己的数据库信息
+2. 使用openssl（其它方法也可）在keys目录下生成公钥和密钥，注意不要将密钥公开。
+3. 启动项目 `pnpm(npm) run dev`
+
+该模板方便我们使用koa搭建后端服务器，初步功能已经集成完毕，为我们搭建项目提供便利，提高开发效率。较完善的处理了登录注册的一系列验证和功能，可以使我们尽快投入业务处理。
