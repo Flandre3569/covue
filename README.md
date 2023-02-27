@@ -5,23 +5,27 @@
 *可用于windows/macOS/linux*
 
 ## 获取方式：
+
 打开终端命令行输入：
-``` node
+
+```node
 pnpm install covue -g
 ```
 
 *也可以使用npm*
-
 
 ## 使用说明：
 
 ### 创建项目：
 
 在你要创建项目的目录下打开终端命令行输入以下指令：
+
 ```node
 covue create <project_name>
 ```
+
 选择要生成的项目模板：
+
 ```
 PS E:\> covue create demo
 ? 🦄please choose a framework: (Use arrow keys)
@@ -32,10 +36,13 @@ PS E:\> covue create demo
 等待一段时间后，项目自动创建完成，并且已经下载好依赖。(node_modules)
 
 进入项目:
+
 ```PowerShell
 cd <project_name>
 ```
+
 使用编辑器打开文件(这里用vsc打开):
+
 ```PowerShell
 code .
 ```
@@ -45,18 +52,17 @@ code .
 ```node
 pnpm run dev
 ```
+
 > vue3项目启动演示：
 
 > show:
->
+> 
 >   vite v2.7.13 dev server running at:
->
->   > Local: http://localhost:3000/
->   > Network: use `--host` to expose
->
+> 
+> > Local: http://localhost:3000/
+> > Network: use `--host` to expose
+> 
 >   ready in 553ms.
-
-
 
 ## 指令集：
 
@@ -70,8 +76,6 @@ Options:
   -f --framework <framework>  your frameword
   -h, --help                  display help for command
 ```
-
-
 
 ### 添加component：
 
@@ -100,8 +104,6 @@ covue add <name> -d <地址>    在指定的<地址>位置添加 <name>.vue 页�
 ```
 
 该指令初衷为添加一个vue的组件，但是也可以在项目任意位置添加一个vue页面。
-
-
 
 ### 添加page：添加新的页面，自动生成路由
 
@@ -149,8 +151,6 @@ export interface I<name> {
 }
 ```
 
-
-
 ### 添加store：状态管理
 
 ```node
@@ -183,8 +183,6 @@ export interface I<name> {
 
 }
 ```
-
-
 
 ## 模板目录：
 
@@ -287,13 +285,17 @@ export interface I<name> {
 - 添加tslint、prettier预选
 
 ### 通知：
+
 无法指定路径bug已修复，可以通过-d指令自由选择添加组件或页面的位置了。
 
 ---
+
 ## Version 1.2.0:
+
 **添加了node-koa模板生成，为服务器的搭建也提供充足的便利。**
 
 ### 模板目录结构：
+
 ```
 │  .env
 │  .gitignore
@@ -336,6 +338,7 @@ export interface I<name> {
 ```
 
 ### 模板内容包含：
+
 - 注册功能
 - 登录验证
 - 用户名、密码合法性验证
@@ -347,9 +350,10 @@ export interface I<name> {
 - 错误处理封装
 - json数据解析，方便接受前端请求
 
-
 ### node-koa框架模板介绍：
+
 该模板的使用首先需要完成以下几个步骤：
+
 1. 在.env文件下配置好自己的数据库信息
 2. 使用openssl（其它方法也可）在keys目录下生成公钥和密钥，注意不要将密钥公开。
 3. 启动项目 `pnpm(npm) run dev`
